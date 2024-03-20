@@ -8,9 +8,16 @@ use App\Models\Train;
 
 class TrainController extends Controller
 {
-  public function index()
+  public function index($today = null)
   {
-    $trains = Train::all();
+    if ($today == "today") {
+      $trains = Train::select("*")->whereRaw("departure_date = CURRENT_DATE()")->get();
+    } elseif (!$today) {
+      $trains = Train::all();
+    } else {
+      return abort(404);
+    }
+
     return view("train.index", compact("trains"));
   }
 }

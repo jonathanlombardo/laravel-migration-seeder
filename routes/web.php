@@ -18,4 +18,4 @@ Route::get('/', function () {
   return view('home');
 })->name('home');
 
-Route::get('/train', [TrainController::class, 'index'])->name('train.index');
+Route::get('/train/{today?}', [TrainController::class, 'index'])->name('train.index');

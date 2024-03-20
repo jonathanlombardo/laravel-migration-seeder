@@ -3,7 +3,11 @@
 
 @section('maincontent')
 <div class="container text-center">
-  <h1 class="my-5">TRAIN LIST</h1>
+  <h1 class="mt-5 mb-3">TRAIN LIST</h1>
+  <div class="mt-3 mb-5">
+    <a class="me-3" href="{{route("train.index", "today")}}">Show only today</a>
+    <a href="{{route("train.index")}}">Show All</a>
+  </div>
   <table class="table">
   <thead>
     <tr>
