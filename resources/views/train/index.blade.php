@@ -13,6 +13,7 @@
     <tr>
       <th scope="col">#code</th>
       <th scope="col">Company</th>
+      <th scope="col">Country</th>
       <th scope="col">Departure Station</th>
       <th scope="col">Arrival Station</th>
       <th scope="col">Departure Time</th>
@@ -28,6 +29,7 @@
 
         <th scope="row">{{$train->code}}</th>
         <td>{{$train->company}}</td>
+        <td>{{$train->country}}</td>
         <td>{{$train->station_from}}</td>
         <td>{{$train->station_to}}</td>
         <td>{{$train->getDepDateTime()}}</td>
