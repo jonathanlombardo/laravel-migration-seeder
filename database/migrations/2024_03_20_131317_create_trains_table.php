@@ -21,7 +21,7 @@ return new class extends Migration {
       $table->time('departure_time');
       $table->date('arrival_date');
       $table->time('arrival_time');
-      $table->char('code', 12)->unique('code');
+      $table->char('code', 12)->unique('code')->nullable();
       $table->tinyInteger('wagons');
       $table->boolean('on_time')->default(true);
       $table->boolean('cancelled')->default(false);
