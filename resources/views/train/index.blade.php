@@ -5,8 +5,16 @@
 <div class="container text-center">
   <h1 class="mt-5 mb-3">TRAIN LIST</h1>
   <div class="mt-3 mb-5">
-    <a class="me-3" href="{{route("train.index", "today")}}">Show only today</a>
-    <a href="{{route("train.index")}}">Show All</a>
+    <a 
+      @class(["me-3", "pb-2", "border-bottom border-3" => !empty (Route::current()->parameters())])
+      href="{{route("train.index", "today")}}"
+      >Show only today
+    </a>
+    <a
+      @class(["me-3", "pb-2", "border-bottom border-3" => empty (Route::current()->parameters())]) 
+      href="{{route("train.index")}}"
+      >Show All
+    </a>
   </div>
   <table class="table">
   <thead>
