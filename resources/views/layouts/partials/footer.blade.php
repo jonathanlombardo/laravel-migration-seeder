@@ -3,11 +3,10 @@
 
     <nav>
       <ul class="">
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li><a href="{{route('home')}}">Home</a></li>
+        <li><a href="{{route('train.index')}}">Train</a></li>
       </ul>
     </nav>
-    <span>NewProject footer</span>
+    <span>{{env('APP_NAME')}} footer</span>
   </div>
 </footer>

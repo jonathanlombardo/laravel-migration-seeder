@@ -3,7 +3,6 @@
 
 @section('maincontent')
 <div class="container text-center">
-  <h1 class="my-5">HOME</h1>
-  <a href="#" class="btn btn-primary">Go to Train</a>
+  <h1 class="my-5">TRAIN LIST</h1>
 </div>
 @endsection

@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
   return view('home');
 })->name('home');
+
+Route::get('/train', function () {
+  return view('train.index');
+})->name('train.index');
