@@ -22,7 +22,7 @@ return new class extends Migration {
       $table->char('code', 12)->unique('code');
       $table->tinyInteger('wagons');
       $table->boolean('on_time')->default(true);
-      $table->boolean('confirmed')->default(false);
+      $table->boolean('cancelled')->default(false);
       $table->timestamps();
     });
   }
