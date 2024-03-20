@@ -34,15 +34,15 @@
         <td>{{$train->station_to}}</td>
         <td>{{$train->getDepDateTime()}}</td>
         <td>{{$train->getArrDateTime()}}</td>
-        <td>{{$train->wagons}}</td>
-        @if($train->on_time)
+        <td>{{$train->wagons}}</td>    
+        @if($train->cancelled)
+          <td></td>
+          <td><i>cancelled</i></td>
+        @elseif($train->on_time)
           <td>&#10003;</td>
+          <td></td>
         @else
           <td><i>delay</i></td>
-        @endif
-        @if($train->cancelled)
-          <td><i>cancelled</i></td>
-          @else
           <td></td>
         @endif
         
