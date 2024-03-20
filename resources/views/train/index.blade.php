@@ -26,8 +26,8 @@
         <td>{{$train->company}}</td>
         <td>{{$train->station_from}}</td>
         <td>{{$train->station_to}}</td>
-        <td>{{$train->departure_time}}</td>
-        <td>{{$train->arrival_time}}</td>
+        <td>{{$train->getDepDateTime()}}</td>
+        <td>{{$train->getArrDateTime()}}</td>
         <td>{{$train->wagons}}</td>
         <td>{{$train->on_time}}</td>
         <td>{{$train->cancelled}}</td>
