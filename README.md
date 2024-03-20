@@ -1,16 +1,21 @@
-### Init project
+# Laravel Migration-Seeder
 
-<p>Project already contain Boostrapp an Scss. Run following command in order to init project correctly</p>
+1. Creiamo una tabella trains tramite la relativa Migration
+2. Ogni treno dovrà avere:
 
-> remember to set a .env file
+    - Azienda
+    - Stazione di partenza
+    - Stazione di arrivo
+    - Orario di partenza
+    - Orario di arrivo
+    - Codice Treno
+    - Numero Carrozze
+    - In orario
+    - Cancellato
 
-#### Init and run frontend
+3. Inserite inizialmente i dati tramite PhpMyAdmin.
+4. Create Model relativo ed un Controller per mostrare nella home page tutti i treni che sono in partenza dalla data odierna.
 
-`npm i` <br>
-`npm run dev`
+#### Bonus
 
-#### Init and run backend
-
-`composer i`<br>
-`php artisan key:generate`<br>
-`php artisan serve`
+Create una seconda migration per aggiungere/modificare una colonna della tabella
