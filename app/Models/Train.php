@@ -12,13 +12,13 @@ class Train extends Model
   private function formatDate($date)
   {
     $date = str_replace('/', '-', $date);
-    $date = date('d-m-y', strtotime($date));
+    $date = date('d/m', strtotime($date));
     return $date;
   }
 
   private function formatTime($time)
   {
-    $time = date("g:i", strtotime($time));
+    $time = date("H:i", strtotime($time));
     return $time;
   }
   public function getDepDateTime()
@@ -26,7 +26,7 @@ class Train extends Model
     $date = $this->formatDate($this->departure_date);
     $time = $this->formatTime($this->departure_time);
 
-    return "[$date] " . $time;
+    return "[ $date ] $time";
   }
 
   public function getArrDateTime()
@@ -36,7 +36,7 @@ class Train extends Model
     $arr_time = $this->formatTime($this->arrival_time);
 
     if ($dep_date != $arr_date) {
-      return "[$arr_date] " . $arr_time;
+      return "[ $arr_date ] $arr_time";
     } else {
       return $arr_time;
     }
