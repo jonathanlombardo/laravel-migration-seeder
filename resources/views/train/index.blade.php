@@ -68,5 +68,8 @@
     
   </tbody>
 </table>
+<div class="my-5">
+  {{ $trains->links() }}
+</div>
 </div>
 @endsection

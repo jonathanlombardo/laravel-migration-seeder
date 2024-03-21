@@ -11,9 +11,9 @@ class TrainController extends Controller
   public function index($today = null)
   {
     if ($today == "today") {
-      $trains = Train::select("*")->whereRaw("departure_date = CURRENT_DATE()")->orderBy("departure_date")->get();
+      $trains = Train::select("*")->whereRaw("departure_date = CURRENT_DATE()")->orderBy("departure_date")->paginate(15);
     } elseif (!$today) {
-      $trains = Train::select("*")->orderBy("departure_date")->get();
+      $trains = Train::select("*")->orderBy("departure_date")->paginate(15);
     } else {
       return abort(404);
     }
